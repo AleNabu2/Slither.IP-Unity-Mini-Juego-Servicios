@@ -126,6 +126,17 @@ Es importante destacar que:
 
 Este comportamiento es esperado dado el manejo dinámico de cámaras en un entorno multijugador local.
 
+### limitación sobre el puntaje
+
+Debido a la naturaleza del sistema multijugador basado en polling y a las limitaciones del servidor, pueden presentarse pequeñas variaciones en el puntaje entre ambos jugadores.
+
+Estas diferencias pueden ocurrir porque:
+- Los jugadores pueden iniciar la partida en momentos ligeramente distintos.
+- La generación de comida no está sincronizada entre clientes, por lo que cada jugador ve instancias diferentes.
+- En algunos casos, una comida puede generarse muy cerca o directamente sobre un jugador, siendo recolectada de forma inmediata en un cliente pero no en el otro.
+
+Estas variaciones son esperadas y no afectan el funcionamiento general del juego ya que el jugador que tiene mas bolitas es el que termina ganando.
+
 ---
 
 ## Autores
